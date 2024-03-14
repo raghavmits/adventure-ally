@@ -2,8 +2,10 @@ import React from "react";
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
 import { MarkerWithInfowindow } from "./MartkerWithInfoWindow";
 
+const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
+
 const Map2 = ({ setCoordinates, setBounds, coordinates, places }) => (
-  <APIProvider apiKey="AIzaSyCnXd9wDGrNzKqBboMdeF-C1t3ChGTNHYA">
+  <APIProvider apiKey={apiKey}>
     <Map
       mapId={"acf4dcb4f2574164"}
       defaultZoom={14}
