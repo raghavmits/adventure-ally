@@ -2,7 +2,8 @@ import React from "react";
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
 import { MarkerWithInfowindow } from "./MartkerWithInfoWindow";
 
-const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
+// const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
+
 
 const Map2 = ({ setCoordinates, setBounds, coordinates, places }) => (
   <APIProvider apiKey={apiKey}>

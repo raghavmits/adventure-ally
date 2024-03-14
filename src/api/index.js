@@ -11,7 +11,7 @@ const options = {
     bl_longitude: "-122.293773",
   },
   headers: {
-    "X-RapidAPI-Key": "0dcbf70a95msh713d0acd139439bp18069bjsn764b549fe533",
+    "X-RapidAPI-Key": {RapidApiKey},
     "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com",
   },
 };
