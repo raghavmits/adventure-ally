@@ -12,15 +12,16 @@ function App() {
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
       ({ coords: { latitude, longitude } }) => {
+        // console.log(latitude, longitude);
         setCoordinates({ lat: latitude, lng: longitude });
       }
     );
   }, []);
 
   useEffect(() => {
-    console.log(coordinates, bounds);
+    // console.log(coordinates, bounds);
     getPlacesData(bounds.sw, bounds.ne).then((data) => {
-      console.log(data);
+      // console.log(data);
       setPlaces(data);
     });
   }, [coordinates, bounds]);

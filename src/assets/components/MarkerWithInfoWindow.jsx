@@ -22,18 +22,26 @@ export const MarkerWithInfowindow = ({ coords }) => {
           background={"#FFFF00"}
           glyphColor={"#1A001A"}
           borderColor={"#000"}
+          
         />
         {infowindowOpen && (
           <InfoWindow
             anchor={marker}
-            maxWidth={200}
+            maxWidth={300}
             onCloseClick={() => setInfowindowOpen(false)}
           >
-            This is an example for the{" "}
-            <code style={{ whiteSpace: "nowrap" }}>
-              &lt;AdvancedMarker /&gt;
-            </code>{" "}
-            combined with an Infowindow.
+            <img
+              className="h-40 w-full object-cover pt-2 pl-2 pr-2 rounded-lg"
+              src={
+                place.photo
+                  ? place.photo.images.large.url
+                  : "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg"
+              }
+              alt={place.name}
+            />
+            <div className="p-4">
+              <h2 className="font-bold text-xl mb-2">{place.name}</h2>
+            </div>
           </InfoWindow>
         )}
       </AdvancedMarker>
