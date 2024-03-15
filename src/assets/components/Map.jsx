@@ -33,7 +33,7 @@ const Map2 = ({ setCoordinates, setBounds, coordinates, places }) => (
           // and pass the place's latitude and longitude as props
           place.latitude && place.longitude && (
             <MarkerWithInfowindow
-              coords={{ lat: Number(place.latitude), lng: Number(place.longitude) }}
+              place={place}
               key={i}
             />
           )

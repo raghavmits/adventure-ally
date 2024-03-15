@@ -29,7 +29,7 @@ function App() {
   return (
     <>
       <div className="min-h-screen">
-        <Header />
+        <Header setCoordinates={setCoordinates}/>
         <div className="flex flex-wrap -mx-3">
           <div className="w-full md:w-1/3 px-3">
             <List places={places}/>

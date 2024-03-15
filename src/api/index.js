@@ -5,6 +5,11 @@ const URL =
 
 
 export const getPlacesData = async (sw, ne) => {
+  if (!sw || !sw.lat || !sw.lng || !ne || !ne.lat || !ne.lng) {
+    console.log('Invalid sw or ne values');
+    return;
+  }
+
   try {
     const { data } = await axios.get(URL, {
       params: {
